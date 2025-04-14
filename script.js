@@ -6,7 +6,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/generate-algorithm", {
+    const response = await fetch("https://human-algo-generator.onrender.com/generate-algorithm", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -4,14 +4,16 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
 // ✅ Your OpenRouter API Key (Keep this private!)
-const apiKey = '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'; // Replace with your actual key
+const apiKey = process.env.OPENROUTER_API_KEY;
+
 
 // ✅ Model to use
 const model = 'openai/gpt-3.5-turbo';
